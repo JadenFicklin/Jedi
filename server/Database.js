@@ -1,5 +1,5 @@
 require("dotenv").config();
-const { PORT, database_url } = process.env;
+const { PORT, DATABASE_URL } = process.env;
 const express = require("express");
 const cors = require("cors");
 const Sequelize = require("sequelize");
@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const sequelize = new Sequelize(database_url, {
+const sequelize = new Sequelize(DATABASE_URL, {
   dialect: "postgres",
   dialectOptions: {
     ssl: {

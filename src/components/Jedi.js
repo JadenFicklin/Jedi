@@ -1,7 +1,7 @@
 import React from "react";
 
 function Jedi() {
-  return <div>Jedi</div>;
+  return <>Jedi</>;
 }
 
 export default Jedi;
